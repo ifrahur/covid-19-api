@@ -54,6 +54,7 @@ def getIndiaData():
 
         indianData = {
             'state': state_name,
+            'confirmed': confirmed,
             'active': active,
             'recovered': recovered,
             'deaths': deaths
