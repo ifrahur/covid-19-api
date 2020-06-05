@@ -6,7 +6,7 @@ import time
 def getIndiaData():
     indiaData = {
         'success': True,
-        'data': []
+        'state': []
     }
     try:
         htmlBody = requests.get('https://www.mygov.in/covid-19')
@@ -53,13 +53,13 @@ def getIndiaData():
         print(deaths)
 
         indianData = {
-            'state': state_name,
+            'state_name': state_name,
             'confirmed': confirmed,
             'active': active,
             'recovered': recovered,
             'deaths': deaths
         }
 
-        indiaData['data'].append(indianData)
+        indiaData['state'].append(indianData)
 
     return indiaData
